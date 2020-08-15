@@ -1,0 +1,6 @@
+<!doctype html>
+<html>
+<head> <title> Response Form </title> </head>
+<h1> Thank you for your submission </h1>
+<a href = home.html> Click Here To Resubmit Again! </a>
+</html>
