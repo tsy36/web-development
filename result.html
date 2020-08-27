@@ -1,0 +1,31 @@
+<html>
+<head> <title> rp calculator </title> </head>
+
+<table align = 'center' border = '1'> <tr>
+<th width = '400'>  <a href = '/'> <h4> Home </h4> </a> </th>   <th width = '400'> <a href = '/about/'> <h4> About </h4> </a> </th>    <th width = '400'> <a href = '/cal/'> <h4> RP Calculator </h4> </a> </th> </tr> </table>
+<h1 align = 'center'>Rank Point Calculator</h1>
+
+<table> <tr> <th> Subject ---------------------------------------------------------------------------------- </th> <th> Grade ----------------------------------------------------------------------------------</th> <th> RP </th> </tr>
+<tr> <td> H2 Subject 1 </td> <td> {{ data['H21'][0]}} </td> <td> {{ data['H21'][1]}} </td> </tr>
+<tr> <td> H2 Subject 2 </td> <td> {{ data['H22'][0]}} </td> <td> {{ data['H22'][1]}} </td> </tr>
+<tr> <td> H2 Subject 3 </td> <td> {{ data['H23'][0]}} </td> <td> {{ data['H23'][1]}} </td> </tr>
+<tr> <td> H1 Subject  </td> <td> {{ data['H1'][0]}} </td> <td> {{ data['H1'][1]}} </td> </tr>
+<tr> <td> General Paper  </td> <td> {{ data['GP'][0]}} </td> <td> {{ data['GP'][1]}} </td> </tr>
+
+{%if status == 'both'%}
+<tr> <td> Project Work  </td> <td> {{ data['PW'][0]}} </td> <td> {{ data['PW'][1]}} </td> </tr>
+<tr> <td> Mother Tongue  </td> <td> {{ data['MT'][0]}} </td> <td> {{ data['MT'][1]}} </td> </tr>
+<tr> <td> Total  </td> <td> </td> <td> {{ data['total']}}/{{tt}} </td> </tr>
+{%endif %}
+
+{%if status == 'pw'%}
+<tr> <td> Project Work  </td> <td> {{ data['PW'][0]}} </td> <td> {{ data['PW'][1]}} </td> </tr>
+<tr> <td> Total  </td> <td> </td> <td> {{ data['total']}}/{{tt}} </td> </tr>
+{%endif %}
+
+{%if status == 'mt'%}
+<tr> <td> Mother Tongue  </td> <td> {{ data['MT'][0]}} </td> <td> {{ data['MT'][1]}} </td> </tr>
+<tr> <td> Total  </td> <td> </td> <td> {{ data['total']}}/{{tt}} </td> </tr>
+{%endif %}
+</table>
+</html>
